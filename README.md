@@ -37,37 +37,44 @@ would say that >70% run full tests.
 # Tested Downstream Repositories
 
 After speaking with maintainers of several projects an initial set of
-packages were established.
+packages were established. A check indicates that the package is
+currently packaged in nixpkgs.
 
  - dask
-   - xarray
-   - scikit-image
-   - xgboost
-   - datashader
-   - stumpy
+   - [X] xarray
+   - [X] scikit-image
+   - [X] xgboost
+   - [ ] datashader
+   - [ ] stumpy
  - numba
    - umap
-   - hpat
-   - librosa
-   - clifford
-   - awkward
-   - sparse
-   - fastparquet
-   - pygbm
+   - [ ] hpat
+   - [X] librosa
+   - [ ] clifford
+   - [X] awkward
+   - [X] sparse
+   - [X] fastparquet
+   - [ ] pygbm
  - astropy
-   - astroquery
-   - pyvo
-   - ccdproc
-   - photutils
-   - sunpy
+   - [X] astroquery
+   - [ ] pyvo
+   - [ ] ccdproc
+   - [ ] photutils
+   - [ ] sunpy
  - matplotlib
-   - seaborn
-   - astropy
-   - pandas
-   - xarray
+   - [X] seaborn
+   - [X] astropy
+   - [X] pandas
+   - [X] xarray
  - sympy
-   - pydy
-   - yt
-   - qnet
+   - [ ] pydy
+   - [ ] yt
+   - [ ] qnet
  - numpy
-   - 
+   - [ ] pandas
+   - [ ] scipy
+   - [ ] matplotlib
+   - [ ] scikit-learn
+   - [ ] scikit-image
+   - [ ] statsmodels
+   - [ ] astropy

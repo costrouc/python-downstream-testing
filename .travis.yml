@@ -1,3 +1,2 @@
 language: nix
-script:
- - nix-build -A matplotlib
+script: bash build.sh
