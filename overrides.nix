@@ -4,37 +4,32 @@ self: super: {
 
     buildInputs = oldAttrs.buildInputs ++ [ super.cython ];
 
-    src =  builtins.fetchGit {
-      url = "git@github.com:numpy/numpy.git";
-      ref = "master";
+    src =  builtins.fetchTarball {
+      url = "https://github.com/numpy/numpy/archive/master.tar.gz";
     };
   });
 
-  numba = super.numpy.overrideAttrs (oldAttrs: {
+  numba = super.numba.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
-    src =  builtins.fetchGit {
-      url = "git@github.com:numba/numba.git";
-      ref = "master";
+    src =  builtins.fetchTarball {
+      url = "https://github.com/numba/numba/archive/master.tar.gz";
     };
   });
-
 
   dask = super.dask.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
-    src =  builtins.fetchGit {
-      url = "git@github.com:dask/dask.git";
-      ref = "master";
+    src =  builtins.fetchTarball {
+      url = "https://github.com/dask/dask/archive/master.tar.gz";
     };
   });
 
   matplotlib = super.dask.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
-    src =  builtins.fetchGit {
-      url = "git@github.com:matplotlib/matplotlib.git";
-      ref = "master";
+    src =  builtins.fetchTarball {
+      url = "https://github.com/matplotlib/matplotlib/archive/master.tar.gz";
     };
   });
 

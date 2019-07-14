@@ -1,8 +1,7 @@
 let
   # use the latest in nixpkgs master
-  pkgs = import (builtins.fetchGit {
-    url = "git@github.com:nixos/nixpkgs.git";
-    ref = "master";
+  pkgs = import (builtins.fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/master.tar.gz";
   }) { config = { allowUnfree = true; }; };
 
   pythonPackages = pkgs.python3Packages.override {

@@ -6,3 +6,14 @@ expressed frustration that they have a hard time testing if their
 changes to master break downstream packages that depend on them.
 
 I hope that this nix demonstration with CI can show how this would work.
+
+
+# Tested Downstream Repositories
+
+ - dask
+   - xarray
+   - scikit-image
+   - xgboost
+   - datashader
+   - stumpy
+ - numba
