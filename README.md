@@ -10,6 +10,9 @@ I hope that this nix demonstration with CI can show how this would work.
 
 # Tested Downstream Repositories
 
+After speaking with maintainers of several projects an initial set of
+packages were established.
+
  - dask
    - xarray
    - scikit-image
@@ -17,3 +20,28 @@ I hope that this nix demonstration with CI can show how this would work.
    - datashader
    - stumpy
  - numba
+   - umap
+   - hpat
+   - librosa
+   - clifford
+   - awkward
+   - sparse
+   - fastparquet
+   - pygbm
+ - astropy
+   - astroquery
+   - pyvo
+   - ccdproc
+   - photutils
+   - sunpy
+ - matplotlib
+   - seaborn
+   - astropy
+   - pandas
+   - xarray
+ - sympy
+   - pydy
+   - yt
+   - qnet
+ - numpy
+   - 

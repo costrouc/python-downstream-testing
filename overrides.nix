@@ -9,6 +9,7 @@ self: super: {
     };
   });
 
+
   numba = super.numba.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
@@ -16,6 +17,7 @@ self: super: {
       url = "https://github.com/numba/numba/archive/master.tar.gz";
     };
   });
+
 
   dask = super.dask.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
@@ -25,11 +27,20 @@ self: super: {
     };
   });
 
+
   matplotlib = super.dask.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
     src =  builtins.fetchTarball {
       url = "https://github.com/matplotlib/matplotlib/archive/master.tar.gz";
+    };
+  });
+
+  sympy = super.dask.overrideAttrs (oldAttrs: {
+    name = "${oldAttrs.pname}-master";
+
+    src =  builtins.fetchTarball {
+      url = "https://github.com/sympy/sympy/archive/master.tar.gz";
     };
   });
 
