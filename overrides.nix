@@ -13,6 +13,10 @@ self: super: {
   numba = super.numba.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
+    configurePhase = oldAttrs.configurePhase + ''
+      echo "version_version = '0.44.1'" > numba/_version.py
+    '';
+
     src =  builtins.fetchTarball {
       url = "https://github.com/numba/numba/archive/master.tar.gz";
     };
