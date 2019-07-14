@@ -44,17 +44,17 @@ currently packaged in nixpkgs.
    - [X] xarray
    - [X] scikit-image
    - [X] xgboost
-   - [ ] datashader
-   - [ ] stumpy
+   - [X] datashader
+   - [X] stumpy
  - numba
    - umap
    - [ ] hpat
    - [X] librosa
-   - [ ] clifford
+   - [X] clifford
    - [X] awkward
    - [X] sparse
    - [X] fastparquet
-   - [ ] pygbm
+   - [X] pygbm
  - astropy
    - [X] astroquery
    - [ ] pyvo
@@ -68,13 +68,13 @@ currently packaged in nixpkgs.
    - [X] xarray
  - sympy
    - [ ] pydy
-   - [ ] yt
+   - [X] yt
    - [ ] qnet
  - numpy
-   - [ ] pandas
-   - [ ] scipy
-   - [ ] matplotlib
-   - [ ] scikit-learn
-   - [ ] scikit-image
-   - [ ] statsmodels
-   - [ ] astropy
+   - [X] pandas
+   - [X] scipy
+   - [X] matplotlib
+   - [X] scikit-learn
+   - [X] scikit-image
+   - [X] statsmodels
+   - [X] astropy
