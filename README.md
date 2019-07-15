@@ -60,14 +60,14 @@ currently packaged in nixpkgs.
    - [ ] pyvo
    - [ ] ccdproc
    - [ ] photutils
-   - [ ] sunpy
+   - [X] sunpy
  - matplotlib
    - [X] seaborn
    - [X] astropy
    - [X] pandas
    - [X] xarray
  - sympy
-   - [ ] pydy
+   - [X] pydy
    - [X] yt
    - [ ] qnet
  - numpy
