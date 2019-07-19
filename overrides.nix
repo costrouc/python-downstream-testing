@@ -19,7 +19,7 @@ self: super: {
   scipy = super.scipy.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
-    buildInputs = oldAttrs.buildInputs ++ [ super.cython ];
+    buildInputs = oldAttrs.buildInputs ++ [ super.cython super.pybind11 ];
 
     buildPhase = ''
       export HOME=$(mktemp -d)
