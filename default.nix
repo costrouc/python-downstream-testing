@@ -9,6 +9,8 @@ in {
 
   scipy = pythonPackages.scipy;
 
+  pandas = pythonPackages.pandas;
+
   dask = pythonPackages.dask;
 
   sympy = pythonPackages.sympy;

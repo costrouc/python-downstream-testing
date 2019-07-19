@@ -10,6 +10,7 @@ self: super: {
   numba = super.numba.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
+    # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
       cat > numba/_version.py <<EOL
       version_version = '0.45.0'
@@ -22,13 +23,17 @@ self: super: {
     src = <numba>;
   });
 
+  pandas = super.pandas.overrideAttrs (oldAttrs: {
+    name = "${oldAttrs.pname}-master";
+
+    src =  <pandas>;
+  });
 
   dask = super.dask.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
     src =  <dask>;
   });
-
 
   matplotlib = super.dask.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
