@@ -32,18 +32,33 @@ self: super: {
       EOL
     '';
 
-
     src =  <pandas>;
   });
 
   dask = super.dask.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
+    # because versioneer.py is not run on git repo
+    configurePhase = oldAttrs.configurePhase + ''
+      cat > dask/_version.py <<EOL
+      def get_versions(default={}, verbose=False):
+          return {'version': '2.1.0'}
+      EOL
+    '';
+
     src =  <dask>;
   });
 
   matplotlib = super.dask.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
+
+    # because versioneer.py is not run on git repo
+    configurePhase = oldAttrs.configurePhase + ''
+      cat > lib/matplotlib/_version.py <<EOL
+      def get_versions(default={}, verbose=False):
+          return {'version': '3.1.1'}
+      EOL
+    '';
 
     src = <matplotlib>;
   });
