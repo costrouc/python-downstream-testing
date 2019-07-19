@@ -19,6 +19,8 @@ self: super: {
   scipy = super.scipy.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
+    buildInputs = oldAttrs.buildInputs ++ [ super.cython ];
+
     src = scipy-src;
   });
 
