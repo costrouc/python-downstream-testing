@@ -4,9 +4,9 @@
 , scipy-src ? <scipy>
 , pandas-src ? <pandas>
 , numba-src ? <numba>
-, matplotlib-src ? <matplotlib-src>
-, sympy-src ? <sympy-src>
-, dask-src ? <dask-src>
+, matplotlib-src ? <matplotlib>
+, sympy-src ? <sympy>
+, dask-src ? <dask>
 }:
 
 let
