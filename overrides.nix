@@ -7,12 +7,16 @@ self: super: {
     src = <numpy>;
   });
 
-
   numba = super.numba.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
     configurePhase = oldAttrs.configurePhase + ''
-      echo "version_version = '0.44.1'" > numba/_version.py
+      cat > numba/_version.py <<EOL
+      version_version = '0.45.0'
+      version_full = '7e2fa9823c1fbf94091ae6024b4cbf04d914581c'
+      def get_versions(default={}, verbose=False):
+          return {'version': version_version, 'full': version_full}
+      EOL
     '';
 
     src = <numba>;
