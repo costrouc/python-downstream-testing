@@ -21,6 +21,10 @@ self: super: {
 
     buildInputs = oldAttrs.buildInputs ++ [ super.cython ];
 
+    buildPhase = ''
+      export HOME=$(mktemp -d)
+    '' + super.buildPhase;
+
     src = scipy-src;
   });
 
