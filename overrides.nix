@@ -13,10 +13,8 @@ self: super: {
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
       cat > numba/_version.py <<EOL
-      version_version = '0.45.0'
-      version_full = '7e2fa9823c1fbf94091ae6024b4cbf04d914581c'
       def get_versions(default={}, verbose=False):
-          return {'version': version_version, 'full': version_full}
+          return {'version': '0.45.0'}
       EOL
     '';
 
@@ -25,6 +23,15 @@ self: super: {
 
   pandas = super.pandas.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
+
+    # because versioneer.py is not run on git repo
+    configurePhase = oldAttrs.configurePhase + ''
+      cat > pandas/_version.py <<EOL
+      def get_versions(default={}, verbose=False):
+          return {'version': '0.25.0'}
+      EOL
+    '';
+
 
     src =  <pandas>;
   });
