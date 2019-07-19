@@ -28,7 +28,6 @@ self: super: {
     src = scipy-src;
   });
 
-
   numba = super.numba.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
@@ -71,7 +70,7 @@ self: super: {
     '';
   });
 
-  matplotlib = super.dask.overrideAttrs (oldAttrs: {
+  matplotlib = super.matplotlib.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
     src = matplotlib-src;
@@ -85,7 +84,7 @@ self: super: {
     '';
   });
 
-  sympy = super.dask.overrideAttrs (oldAttrs: {
+  sympy = super.sympy.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
     src = sympy-src;
