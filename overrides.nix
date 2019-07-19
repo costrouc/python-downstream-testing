@@ -23,7 +23,7 @@ self: super: {
 
     buildPhase = ''
       export HOME=$(mktemp -d)
-    '' + super.buildPhase;
+    '' + oldAttrs.buildPhase;
 
     src = scipy-src;
   });
