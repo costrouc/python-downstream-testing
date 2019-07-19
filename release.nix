@@ -1,3 +1,4 @@
+# <...> used in hydra build ci
 { pkgs ? import <nixpkgs> { }
 , numpy-src ? <numpy>
 , scipy-src ? <scipy>
