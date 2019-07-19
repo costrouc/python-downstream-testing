@@ -9,9 +9,13 @@ in {
 
   scipy = pythonPackages.scipy;
 
+  dask = pythonPackages.dask;
+
   sympy = pythonPackages.sympy;
 
   matplotlib = pythonPackages.matplotlib;
 
   numba = pythonPackages.numba;
+
+  xarray = pythonPackages.xarray;
 }
