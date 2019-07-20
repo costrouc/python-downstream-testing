@@ -17,18 +17,21 @@ let
   };
 in {
   numpy = pythonPackages.numpy;
-
   scipy = pythonPackages.scipy;
-
   pandas = pythonPackages.pandas;
-
+  numba = pythonPackages.numba;
+  matplotlib = pythonPackages.matplotlib;
+  sympy = pythonPackages.sympy;
   dask = pythonPackages.dask;
 
-  sympy = pythonPackages.sympy;
-
-  matplotlib = pythonPackages.matplotlib;
-
-  numba = pythonPackages.numba;
-
+  # downstream packages
+  astropy = pythonPackages.astropy;
+  awkward = pythonPackages.awkward;
+  scikitimage = pythonPackages.scikitimage;
+  scikitlearn = pythonPackages.scikitlearn;
+  seaborn = pythonPackages.seaborn;
+  sparse = pythonPackages.sparse;
+  statsmodels = pythonPackages.statsmodels;
   xarray = pythonPackages.xarray;
+  xgboost = pythonPackages.xgboost;
 }
