@@ -25,8 +25,6 @@ self: super: {
       export HOME=$(mktemp -d)
     '' + oldAttrs.buildPhase;
 
-    doCheck = true;
-
     src = scipy-src;
   });
 
@@ -84,9 +82,10 @@ self: super: {
       # sed -i 's/TestTinyPages/fails/' lib/matplotlib/sphinxext/tests/test_tinypages.py
       # Transient errors
       sed -i 's/test_invisible_Line_rendering/noop/' lib/matplotlib/tests/test_lines.py
-    '';
 
-    doCheck = true;
+      substituteInPlace setup.py \
+        --replace "cmdclass['install_lib'] = install_lib_with_jquery" ""
+    '';
   });
 
   sympy = super.sympy.overrideAttrs (oldAttrs: {
