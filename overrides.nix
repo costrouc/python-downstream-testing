@@ -79,6 +79,7 @@ self: super: {
   sympy = super.sympy.overrideAttrs (oldAttrs: {
     name = "${oldAttrs.pname}-master";
 
+    # https://github.com/sympy/sympy/pull/13476#issuecomment-513474029
     patches = []; # remove sage patch
 
     src = sympy-src;
