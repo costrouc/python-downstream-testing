@@ -35,7 +35,7 @@ self: super: {
 
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
-      subsituteInPlace setup.py \
+      substituteInPlace setup.py \
         --replace "version=versioneer.get_version()" "version='0.45.0'"
     '';
   });
@@ -47,7 +47,7 @@ self: super: {
 
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
-      subsituteInPlace setup.py \
+      substituteInPlace setup.py \
         --replace "version=versioneer.get_version()" "version='0.25.0'"
     '';
   });
@@ -59,7 +59,7 @@ self: super: {
 
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
-      subsituteInPlace setup.py \
+      substituteInPlace setup.py \
         --replace "version=versioneer.get_version()" "version='2.1.0'"
     '';
   });
@@ -71,7 +71,7 @@ self: super: {
 
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
-      subsituteInPlace setup.py \
+      substituteInPlace setup.py \
         --replace "version=versioneer.get_version()" "version='3.1.1'"
     '';
   });
