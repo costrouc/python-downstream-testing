@@ -72,7 +72,7 @@ self: super: {
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
       substituteInPlace setup.py \
-        --replace "version=versioneer.get_version()" "version='3.1.1'"
+        --replace "version=__version__" "version='3.1.1'"
     '';
 
     prePatch = ''
