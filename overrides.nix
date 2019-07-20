@@ -35,10 +35,8 @@ self: super: {
 
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
-      cat > numba/_version.py <<EOL
-      def get_versions(default={}, verbose=False):
-          return {'version': '0.45.0'}
-      EOL
+      subsituteInPlace setup.py \
+        --replace "version=versioneer.get_version()" "version='0.45.0'"
     '';
   });
 
@@ -49,10 +47,8 @@ self: super: {
 
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
-      cat > pandas/_version.py <<EOL
-      def get_versions(default={}, verbose=False):
-          return {'version': '0.25.0'}
-      EOL
+      subsituteInPlace setup.py \
+        --replace "version=versioneer.get_version()" "version='0.25.0'"
     '';
   });
 
@@ -63,10 +59,8 @@ self: super: {
 
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
-      cat > dask/_version.py <<EOL
-      def get_versions(default={}, verbose=False):
-          return {'version': '2.1.0'}
-      EOL
+      subsituteInPlace setup.py \
+        --replace "version=versioneer.get_version()" "version='2.1.0'"
     '';
   });
 
@@ -77,10 +71,8 @@ self: super: {
 
     # because versioneer.py is not run on git repo
     configurePhase = oldAttrs.configurePhase + ''
-      cat > lib/matplotlib/_version.py <<EOL
-      def get_versions(default={}, verbose=False):
-          return {'version': '3.1.1'}
-      EOL
+      subsituteInPlace setup.py \
+        --replace "version=versioneer.get_version()" "version='3.1.1'"
     '';
   });
 
